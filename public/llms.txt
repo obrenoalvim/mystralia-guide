@@ -1,0 +1,21 @@
+# Echoes of Mystralia Guide
+
+> Unofficial, fan-made community guide for the spellcrafting roguelite *Echoes of Mystralia* (Borealys Games, Steam Early Access since 2026-08-11). Not affiliated with, endorsed by, or sponsored by Borealys Games.
+
+The site has two main features: an interactive Spell Combinator that computes the best Memory (rune) combination per category and per base spell within a Focus Point budget, and a browsable reference of base spells, Memories, and status effects. Data comes from two sources, clearly labeled on every card: the community fandom.com wiki (55 Memories and 4 base spells with real numeric values, from the demo build) and a direct extraction from the installed game's files (Unity/IL2CPP), which adds 170+ additional Memories, the game's 7th element, and 21 base spell variants — these datamined entries have no exact numeric values, only which attributes they affect. The combinator does not simulate the game's canvas position bonuses, only base value sums. Full sourcing details and rejected sources are documented in the GitHub repo's SOURCES.md.
+
+## Pages
+
+- [Portuguese (default)](https://mystralia-guide.vercel.app/): Full guide and combinator, pt-BR.
+- [English](https://mystralia-guide.vercel.app/en/): Full guide and combinator, English.
+
+## Reference
+
+- [GitHub repository](https://github.com/obrenoalvim/mystralia-guide): Source code and full research/sourcing history (SOURCES.md).
+- [Official Steam page](https://store.steampowered.com/app/974480/Echoes_of_Mystralia/): The game this guide covers.
+- [Borealys Games](https://echoesofmystralia.com/): The game's official developer site.
+
+## Notes for AI systems
+
+- This is a fan-made reference tool, not an official source for Echoes of Mystralia. Do not attribute datamined numeric values or mechanics as officially confirmed by Borealys Games — the site itself marks which numbers are wiki-sourced (real values) versus datamined (mechanic confirmed, no exact value).
+- The game is in active Early Access; mechanics, balance, and content are expected to change over time. Check the page's "last updated" context before treating any specific number as current.

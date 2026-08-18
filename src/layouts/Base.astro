@@ -8,6 +8,45 @@ const canonicalUrl = new URL(canonicalPath, Astro.site).toString();
 const altPath = locale === 'en' ? '/' : '/en/';
 const altUrl = new URL(altPath, Astro.site).toString();
 const ogImage = 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/974480/header_alt_assets_1.jpg?t=1786478449';
+
+const gameJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoGame',
+  '@id': 'https://mystralia-guide.vercel.app/#game',
+  name: 'Echoes of Mystralia',
+  publisher: { '@type': 'Organization', name: 'Borealys Games' },
+  genre: ['Action RPG', 'Roguelite'],
+  gamePlatform: 'PC',
+  sameAs: [
+    'https://store.steampowered.com/app/974480/Echoes_of_Mystralia/',
+    'https://echoesofmystralia.com/',
+  ],
+};
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: dict.siteTitle,
+  description: dict.siteDescription,
+  url: canonicalUrl,
+  inLanguage: locale === 'en' ? 'en' : 'pt-BR',
+  isAccessibleForFree: true,
+  about: { '@id': 'https://mystralia-guide.vercel.app/#game' },
+  sameAs: ['https://github.com/obrenoalvim/mystralia-guide'],
+};
+
+const combinatorJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: dict.combinador.title,
+  description: dict.combinador.hint,
+  url: canonicalUrl,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Any (runs in a web browser)',
+  browserRequirements: 'Requires JavaScript',
+  isAccessibleForFree: true,
+  inLanguage: locale === 'en' ? 'en' : 'pt-BR',
+};
 ---
 
 <!doctype html>
@@ -26,6 +65,7 @@ const ogImage = 'https://shared.fastly.steamstatic.com/store_item_assets/steam/a
   <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site).toString()} />
 
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={dict.siteTitle} />
   <meta property="og:title" content={dict.siteTitle} />
   <meta property="og:description" content={dict.siteDescription} />
   <meta property="og:url" content={canonicalUrl} />
@@ -35,6 +75,10 @@ const ogImage = 'https://shared.fastly.steamstatic.com/store_item_assets/steam/a
   <meta name="twitter:title" content={dict.siteTitle} />
   <meta name="twitter:description" content={dict.siteDescription} />
   <meta name="twitter:image" content={ogImage} />
+
+  <script type="application/ld+json" set:html={JSON.stringify(gameJsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(combinatorJsonLd)} />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
