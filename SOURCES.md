@@ -3,6 +3,41 @@
 > Lista de tudo que foi acessado durante a pesquisa, com nota de confiabilidade,
 > pra retomar depois sem repetir trabalho. Projeto: `F:\GitHub\mystralia-guide`.
 
+## Confiáveis / usadas no site (dataminado, 18/08/2026, 4ª sessão)
+
+- **Achei a tabela de localização oficial do jogo.** Ficava em `data.unity3d` (o arquivo
+  principal, não nos bundles de addressables que eu já tinha minerado), num único
+  MonoBehaviour de ~169KB (path_id 3830 nesse load específico — path_id não é estável
+  entre loads, tem que buscar pelo conteúdo). Formato: `[chave]` seguido de 11 strings
+  em sequência (EN, EN duplicado, FR, ES, **PT**, DE, IT, RU, JA, ZH, KO), repetido pra
+  cada entrada. 310 chaves no total, sendo 197 `_name` e 96 `_desc`/`_effect_text`.
+  Script: `dump_loc_blob2.py` (acha o objeto pelo conteúdo bruto) + `parse_loc_table2.py`
+  (fatia em blocos de 11 strings por chave).
+  - Cruzando essa tabela com os devId que eu já tinha: **103 das 173 Memórias e as 21
+    variantes de feitiço-base bateram 100%** com nome oficial (EN+PT reais, não mais
+    nome gerado do ID interno). As 4 variantes conhecidas da wiki entram nessa conta e
+    bateram exatamente (Furi Igni, Nosta Aqua, Exae Aura, Cele Aer), o que valida a
+    tabela como fonte confiável, não achado especulativo.
+    27 Memórias também ganharam descrição oficial (texto real, limpo de tags de rich
+    text tipo `<style="...">` e do placeholder `[attributes]`).
+  - **Achei 4 Memórias novas** que eu nunca tinha capturado (não seguem o padrão
+    "Rune_" nem tinham `isPrimordial`): `rune_thunder_strike` (Trovão/Thunderstrikes),
+    `rune_earth_wall` (Parede de Terra/Earth Wall), `rune_beetle_bomb`
+    (Bomba-Besouro/Beetle Bomb), `rune_explosion_trap` (Armadilha Explosiva/Explosion
+    Trap). Usam um atlas de ícone diferente (`UI_Atlas_RuneTotem_*` em vez de
+    `UI_Atlas_Evocation_*`), talvez uma categoria "totem" separada.
+  - **Pendência real, não resolvida**: usuário reportou ter "Falling Sky" equipado no
+    jogo. A chave `rune_fire_meteor_name` confirma o nome oficial ("Falling Sky" /
+    "Queda dos Céus"), mas **não achei o objeto Rune correspondente em nenhum bundle
+    nem no data.unity3d** — só a entrada de texto. Pode ser uma Relíquia (categoria que
+    eu nunca minerei) ou estar em conteúdo ainda não baixado localmente. Não entrou no
+    site pra não inventar dado. Idem pra ~65 outras chaves `_name` da tabela que
+    parecem ser labels genéricos de atributo/formação (tipo `rune_apply_burn` →
+    "Apply Burn", `rune_line` → "Straight Line") reaproveitados em várias descrições,
+    não itens próprios — não são Memórias faltando, são peças de vocabulário.
+  - Arquivo completo da tabela salvo em `loc_table.json` no scratchpad da sessão (não
+    versionado no repo, só o resultado já aplicado aos dados do site).
+
 ## Confiáveis / usadas no site
 
 - **https://echoesofmystralia.fandom.com/wiki/Memories** — wiki comunitária (fandom).

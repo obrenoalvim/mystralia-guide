@@ -7,20 +7,6 @@
     "official": false,
     "unlockable": true,
     "icon": "/images/runes/UI_Atlas_Evocation_Boomerang_Lightning.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneSpeedAttribute",
-      "RuneBounceToStatusEffectAttribute",
-      "RuneReturnToCastAttribute"
-    ],
-    "tags": [
-      "moving",
-      "primordial",
-      "projectile",
-      "boomerang",
-      "main_damage_dot"
-    ],
     "descPt": "Afeta Dano, Duração, Velocidade, Ricochete Para Status Efeito, Retorno Para Conjuração. Tags: em movimento, primordial, projétil, bumerangue, dano principal contínuo.",
     "descEn": "Affects Damage, Duration, Speed, Bounce To Status Effect, Return To Cast. Tags: moving, primordial, projectile, boomerang, main damage over time.",
     "namePt": "Cele Aura",
@@ -41,17 +27,6 @@
     "official": false,
     "unlockable": true,
     "icon": "/images/runes/UI_Atlas_Evocation_FireSlash_Earth.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneSizeAttribute",
-      "RuneApplyKnockbackCasterAttribute"
-    ],
-    "tags": [
-      "melee",
-      "projectile",
-      "primordial"
-    ],
     "descPt": "Afeta Dano, Duração, Tamanho, Aplica Empurrão Conjurador. Tags: corpo a corpo, projétil, primordial.",
     "descEn": "Affects Damage, Duration, Size, Apply Knockback Caster. Tags: melee, projectile, primordial.",
     "namePt": "Furi Gaea",
@@ -72,20 +47,6 @@
     "official": false,
     "unlockable": true,
     "icon": "/images/runes/UI_Atlas_Evocation_IceSnipe_Fire.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneSpeedAttribute",
-      "RuneApplyBurnAttribute",
-      "RuneChargeDamageRangeAttribute"
-    ],
-    "tags": [
-      "moving",
-      "primordial",
-      "burn",
-      "projectile",
-      "main_damage_dot"
-    ],
     "descPt": "Afeta Dano, Duração, Velocidade, Aplica Queimadura, Carga Dano Alcance. Tags: em movimento, primordial, queimadura, projétil, dano principal contínuo.",
     "descEn": "Affects Damage, Duration, Speed, Apply Burn, Charge Damage Range. Tags: moving, primordial, burn, projectile, main damage over time.",
     "namePt": "Nosta Igni",
@@ -106,20 +67,6 @@
     "official": false,
     "unlockable": false,
     "icon": "/images/runes/UI_Atlas_Evocation_LightningBeam_Wind.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneLengthAttribute",
-      "RuneApplyVortexAttribute",
-      "RuneGainHasteAttribute"
-    ],
-    "tags": [
-      "beam",
-      "primordial",
-      "stationary",
-      "follow",
-      "main_damage_dot"
-    ],
     "descPt": "Afeta Dano, Duração, Alcance, Aplica Vórtice, Ganha Pressa. Tags: feixe, primordial, parado, segue o alvo, dano principal contínuo.",
     "descEn": "Affects Damage, Duration, Length, Apply Vortex, Gain Haste. Tags: beam, primordial, stationary, follows target, main damage over time.",
     "namePt": "Exae Aer",
@@ -140,26 +87,6 @@
     "official": false,
     "unlockable": true,
     "icon": "/images/runes/UI_Atlas_Evocation_LightningBeam_Earth.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneSpeedAttribute",
-      "RuneOrbitMovementAttribute",
-      "RuneTangibleAttribute",
-      "RuneRequiringCooldownAttribute"
-    ],
-    "tags": [
-      "projectile",
-      "primordial",
-      "stationary",
-      "follow",
-      "main_damage_dot",
-      "tangible",
-      "orbit",
-      "follow_caster",
-      "group_trigger",
-      "specific_formation"
-    ],
     "descPt": "Afeta Dano, Duração, Velocidade, Órbita Movimento, Tangível, Requer Recarga. Tags: projétil, primordial, parado, segue o alvo, dano principal contínuo, tangível, orbital, segue o conjurador, gatilho em grupo, formação específica.",
     "descEn": "Affects Damage, Duration, Speed, Orbit Movement, Tangible, Requiring Cooldown. Tags: projectile, primordial, stationary, follows target, main damage over time, tangible, orbiting, follows caster, group trigger, specific formation.",
     "namePt": "Exae Gaea",
@@ -180,17 +107,6 @@
     "official": false,
     "unlockable": true,
     "icon": "/images/runes/UI_Atlas_Evocation_FireSlash_Lightning.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneSizeAttribute",
-      "RuneApplyStaticAttribute"
-    ],
-    "tags": [
-      "melee",
-      "projectile",
-      "primordial"
-    ],
     "descPt": "Afeta Dano, Duração, Tamanho, Aplica Estático. Tags: corpo a corpo, projétil, primordial.",
     "descEn": "Affects Damage, Duration, Size, Apply Static. Tags: melee, projectile, primordial.",
     "namePt": "Furi Aura",
@@ -211,21 +127,6 @@
     "official": false,
     "unlockable": true,
     "icon": "/images/runes/UI_Atlas_Evocation_LightningBeam_Ice.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneLengthAttribute",
-      "RuneApplyChillAttribute",
-      "RuneCastsBlizzardAttribute"
-    ],
-    "tags": [
-      "beam",
-      "primordial",
-      "stationary",
-      "follow",
-      "main_damage_dot",
-      "chill"
-    ],
     "descPt": "Afeta Dano, Duração, Alcance, Aplica Resfriamento, Conjura Nevasca. Tags: feixe, primordial, parado, segue o alvo, dano principal contínuo, resfriamento.",
     "descEn": "Affects Damage, Duration, Length, Apply Chill, Casts Blizzard. Tags: beam, primordial, stationary, follows target, main damage over time, chill.",
     "namePt": "Exae Aqua",
@@ -246,22 +147,6 @@
     "official": false,
     "unlockable": true,
     "icon": "/images/runes/UI_Atlas_Evocation_IceSnipe_Lightning.png",
-    "attrs": [
-      "RuneMaxSimultaneousAttribute",
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneSpeedAttribute",
-      "RuneSizeAttribute",
-      "RuneApplyStaticAttribute",
-      "RuneChargeDamageRangeAttribute"
-    ],
-    "tags": [
-      "moving",
-      "primordial",
-      "static",
-      "projectile",
-      "stationary_duration"
-    ],
     "descPt": "Afeta Máximo Simultâneo, Dano, Duração, Velocidade, Tamanho, Aplica Estático, Carga Dano Alcance. Tags: em movimento, primordial, estático, projétil, duração parada.",
     "descEn": "Affects Max Simultaneous, Damage, Duration, Speed, Size, Apply Static, Charge Damage Range. Tags: moving, primordial, static, projectile, stationary duration.",
     "namePt": "Nosta Aura",
@@ -282,21 +167,6 @@
     "official": true,
     "unlockable": true,
     "icon": "/images/runes/UI_Atlas_Evocation_LightningBeam.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneLengthAttribute",
-      "RuneApplyStaticAttribute",
-      "RuneOverflowsAttribute"
-    ],
-    "tags": [
-      "beam",
-      "primordial",
-      "stationary",
-      "follow",
-      "main_damage_dot",
-      "static"
-    ],
     "descPt": null,
     "descEn": null,
     "namePt": null,
@@ -317,19 +187,6 @@
     "official": true,
     "unlockable": true,
     "icon": "/images/runes/UI_Atlas_Evocation_IceSnipe.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneSpeedAttribute",
-      "RuneApplyChillAttribute",
-      "RuneChargeDamageRangeAttribute"
-    ],
-    "tags": [
-      "moving",
-      "primordial",
-      "chill",
-      "projectile"
-    ],
     "descPt": null,
     "descEn": null,
     "namePt": null,
@@ -350,20 +207,6 @@
     "official": true,
     "unlockable": true,
     "icon": "/images/runes/UI_Atlas_Evocation_Boomerang.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneSpeedAttribute",
-      "RunePierceAttribute",
-      "RuneReturnToCastAttribute"
-    ],
-    "tags": [
-      "moving",
-      "primordial",
-      "projectile",
-      "boomerang",
-      "main_damage_dot"
-    ],
     "descPt": null,
     "descEn": null,
     "namePt": null,
@@ -384,26 +227,10 @@
     "official": false,
     "unlockable": true,
     "icon": "/images/runes/UI_Atlas_Evocation_Stone_Wall.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneSizeAttribute",
-      "RuneApplyStunAttribute",
-      "RuneHealthAttribute",
-      "RuneBlocksAttribute"
-    ],
-    "tags": [
-      "moving",
-      "primordial",
-      "projectile",
-      "no_formation_offset",
-      "follow",
-      "needs_external_orbit"
-    ],
     "descPt": "Afeta Dano, Duração, Tamanho, Aplica Atordoamento, Vida, Bloqueio. Tags: em movimento, primordial, projétil, sem deslocamento de formação, segue o alvo, precisa de órbita externa.",
     "descEn": "Affects Damage, Duration, Size, Apply Stun, Health, Blocks. Tags: moving, primordial, projectile, no formation offset, follows target, needs external orbit.",
-    "namePt": "Stone Wall",
-    "nameEn": "Stone Wall",
+    "namePt": "Sere Gaea",
+    "nameEn": "Sere Gaea",
     "scores": {
       "dano": 2,
       "area": 2,
@@ -420,18 +247,6 @@
     "official": false,
     "unlockable": false,
     "icon": "/images/runes/UI_Atlas_Evocation_FireSlash_Ice.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneSizeAttribute",
-      "RuneApplyChillAttribute"
-    ],
-    "tags": [
-      "melee",
-      "projectile",
-      "primordial",
-      "chill"
-    ],
     "descPt": "Afeta Dano, Duração, Tamanho, Aplica Resfriamento. Tags: corpo a corpo, projétil, primordial, resfriamento.",
     "descEn": "Affects Damage, Duration, Size, Apply Chill. Tags: melee, projectile, primordial, chill.",
     "namePt": "Furi Aqua",
@@ -452,22 +267,6 @@
     "official": false,
     "unlockable": true,
     "icon": "/images/runes/UI_Atlas_Evocation_Boomerang_Earth.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneSpeedAttribute",
-      "RuneTangibleWithCountAttribute",
-      "RuneExplodeOnRecallAttribute"
-    ],
-    "tags": [
-      "moving",
-      "primordial",
-      "projectile",
-      "boomerang",
-      "tangible",
-      "stationary_duration",
-      "sub_materialization"
-    ],
     "descPt": "Afeta Dano, Duração, Velocidade, Tangível Com Contagem, Explode Em Retorno. Tags: em movimento, primordial, projétil, bumerangue, tangível, duração parada, submaterialização.",
     "descEn": "Affects Damage, Duration, Speed, Tangible With Count, Explode On Recall. Tags: moving, primordial, projectile, boomerang, tangible, stationary duration, sub-materialization.",
     "namePt": "Cele Gaea",
@@ -488,18 +287,6 @@
     "official": true,
     "unlockable": true,
     "icon": "/images/runes/UI_Atlas_Evocation_FireSlash.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneSizeAttribute",
-      "RuneApplyBurnAttribute"
-    ],
-    "tags": [
-      "melee",
-      "projectile",
-      "primordial",
-      "burn"
-    ],
     "descPt": null,
     "descEn": null,
     "namePt": null,
@@ -520,20 +307,6 @@
     "official": false,
     "unlockable": false,
     "icon": "/images/runes/UI_Atlas_Evocation_IceSnipe_Earth.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneSpeedAttribute",
-      "RuneApplyStunOnPerfectCastAttribute",
-      "RuneChargeDamageRangeAttribute"
-    ],
-    "tags": [
-      "moving",
-      "primordial",
-      "projectile",
-      "stun",
-      "knockback"
-    ],
     "descPt": "Afeta Dano, Duração, Velocidade, Aplica Atordoamento Em Perfeito Conjuração, Carga Dano Alcance. Tags: em movimento, primordial, projétil, atordoamento, empurrão.",
     "descEn": "Affects Damage, Duration, Speed, Apply Stun On Perfect Cast, Charge Damage Range. Tags: moving, primordial, projectile, stun, knockback.",
     "namePt": "Nosta Gaea",
@@ -554,22 +327,6 @@
     "official": false,
     "unlockable": true,
     "icon": "/images/runes/UI_Atlas_Evocation_FireSlash_Wind.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneSizeAttribute",
-      "RuneApplyKnockbackAttribute"
-    ],
-    "tags": [
-      "melee",
-      "beam",
-      "primordial",
-      "follow",
-      "orbit",
-      "main_damage_dot",
-      "follow_caster",
-      "override_spawn_trigger_at_caster"
-    ],
     "descPt": "Afeta Dano, Duração, Tamanho, Aplica Empurrão. Tags: corpo a corpo, feixe, primordial, segue o alvo, orbital, dano principal contínuo, segue o conjurador, gatilho de geração no conjurador.",
     "descEn": "Affects Damage, Duration, Size, Apply Knockback. Tags: melee, beam, primordial, follows target, orbiting, main damage over time, follows caster, spawn trigger at caster.",
     "namePt": "Furi Aer",
@@ -590,22 +347,6 @@
     "official": false,
     "unlockable": false,
     "icon": "/images/runes/UI_Atlas_Evocation_Boomerang_Fire.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneSpeedAttribute",
-      "RunePierceAttribute",
-      "RuneApplyBurnAttribute",
-      "RuneReturnToCastAttribute"
-    ],
-    "tags": [
-      "moving",
-      "primordial",
-      "projectile",
-      "boomerang",
-      "main_damage_dot",
-      "stationary_duration"
-    ],
     "descPt": "Afeta Dano, Duração, Velocidade, Perfuração, Aplica Queimadura, Retorno Para Conjuração. Tags: em movimento, primordial, projétil, bumerangue, dano principal contínuo, duração parada.",
     "descEn": "Affects Damage, Duration, Speed, Pierce, Apply Burn, Return To Cast. Tags: moving, primordial, projectile, boomerang, main damage over time, stationary duration.",
     "namePt": "Cele Igni",
@@ -626,23 +367,6 @@
     "official": false,
     "unlockable": true,
     "icon": "/images/runes/UI_Atlas_Evocation_Boomerang_Ice.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneSpeedAttribute",
-      "RunePierceAttribute",
-      "RuneApplyChillAttribute",
-      "RuneReturnToCastAttribute"
-    ],
-    "tags": [
-      "moving",
-      "primordial",
-      "projectile",
-      "boomerang",
-      "main_damage_dot",
-      "stationary_duration",
-      "chill"
-    ],
     "descPt": "Afeta Dano, Duração, Velocidade, Perfuração, Aplica Resfriamento, Retorno Para Conjuração. Tags: em movimento, primordial, projétil, bumerangue, dano principal contínuo, duração parada, resfriamento.",
     "descEn": "Affects Damage, Duration, Speed, Pierce, Apply Chill, Return To Cast. Tags: moving, primordial, projectile, boomerang, main damage over time, stationary duration, chill.",
     "namePt": "Cele Aqua",
@@ -663,21 +387,6 @@
     "official": false,
     "unlockable": true,
     "icon": "/images/runes/UI_Atlas_Evocation_LightningBeam_Fire.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneLengthAttribute",
-      "RuneApplyBurnAttribute",
-      "RuneGainRageAttribute"
-    ],
-    "tags": [
-      "beam",
-      "primordial",
-      "stationary",
-      "follow",
-      "main_damage_dot",
-      "burn"
-    ],
     "descPt": "Afeta Dano, Duração, Alcance, Aplica Queimadura, Ganha Fúria. Tags: feixe, primordial, parado, segue o alvo, dano principal contínuo, queimadura.",
     "descEn": "Affects Damage, Duration, Length, Apply Burn, Gain Rage. Tags: beam, primordial, stationary, follows target, main damage over time, burn.",
     "namePt": "Exae Igni",
@@ -698,19 +407,6 @@
     "official": false,
     "unlockable": true,
     "icon": "/images/runes/UI_Atlas_Evocation_IceSnipe_Wind.png",
-    "attrs": [
-      "RuneDamageAttribute",
-      "RuneDurationAttribute",
-      "RuneLengthAttribute",
-      "RuneApplyVortexAttribute",
-      "RuneChargeDamageRangeAttribute"
-    ],
-    "tags": [
-      "moving",
-      "primordial",
-      "pull",
-      "beam"
-    ],
     "descPt": "Afeta Dano, Duração, Alcance, Aplica Vórtice, Carga Dano Alcance. Tags: em movimento, primordial, puxão, feixe.",
     "descEn": "Affects Damage, Duration, Length, Apply Vortex, Charge Damage Range. Tags: moving, primordial, pull, beam.",
     "namePt": "Nosta Aer",

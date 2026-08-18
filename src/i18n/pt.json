@@ -103,7 +103,7 @@
   "about": {
     "title": "Sobre este guia",
     "p1": "Este é um guia de fã, feito sem vínculo com a Borealys Games. Echoes of Mystralia estava em Early Access havia poucos dias quando este site começou, e boa parte do que existia sobre o jogo em português e inglês era conteúdo genérico gerado rápido demais pra ser confiável.",
-    "p2": "Os dados aqui vêm de duas fontes. A wiki comunitária fandom.com documentou 55 Memórias e 4 feitiços base com números reais, aparentemente da build de demonstração. Depois, uma sessão de extração direta dos arquivos do jogo instalado (Unity, IL2CPP) confirmou 171 Memórias únicas adicionais, o sétimo elemento do jogo e 21 variantes reais de feitiço base, junto com os ícones originais.",
+    "p2": "Os dados aqui vêm de duas fontes. A wiki comunitária fandom.com documentou 55 Memórias e 4 feitiços base com números reais, aparentemente da build de demonstração. Depois, uma sessão de extração direta dos arquivos do jogo instalado (Unity, IL2CPP) confirmou mais de 170 Memórias únicas adicionais (muitas com nome oficial resolvido direto da tabela de localização do jogo), o sétimo elemento do jogo e 21 variantes reais de feitiço base, junto com os ícones originais.",
     "p3": "As entradas extraídas dos arquivos do jogo não têm valor numérico exato disponível nem localização oficial: o nome vem do identificador interno do jogo, e a descrição lista só quais atributos a Memória afeta. Isso está marcado em cada card. Tudo que tem número (dano, duração, porcentagem) veio da wiki comunitária, não dos arquivos.",
     "p4": "O código é aberto. O repositório tem a documentação completa do processo de pesquisa, incluindo as fontes rejeitadas por parecerem geradas artificialmente.",
     "disclaimerTitle": "Aviso",
