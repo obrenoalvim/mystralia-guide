@@ -17,11 +17,9 @@
   "langSwitch": "Português",
   "combinador": {
     "title": "Spell Combinator",
-    "hint": "Build your run. Pick up to 2 base spells from the 21 confirmed variants found in the game files (4 of them have official numbers from the wiki, the other 17 are confirmed but without exact values). Check the Memories you own, everything starts checked, and the combinator finds the best combination per category and per spell within your Focus Point budget. It does not simulate canvas position bonuses, it only adds base values.",
+    "hint": "Build your run with 2 base spells, picked from the 21 confirmed variants found in the game files (4 of them have official numbers from the wiki, the other 17 are confirmed but without exact values). Check the Memories you own, everything starts checked, and the combinator finds the best combination per category and per spell within your Focus Point budget. It does not simulate canvas position bonuses, it only adds base values.",
     "spell1": "Base spell 1",
     "spell2": "Base spell 2",
-    "spell2Hint": "optional, run with 2 spells",
-    "spell2None": "none",
     "budget": "Focus budget",
     "myMemories": "My Memories",
     "addMemory": "Add Memory",

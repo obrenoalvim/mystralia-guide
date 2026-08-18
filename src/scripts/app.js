@@ -238,23 +238,20 @@ function renderResults() {
   const el = document.getElementById('results-list');
   const budget = Number(document.getElementById('focus-budget').value) || 6;
   const spell1 = BASE_SPELLS.find((s) => s.id === document.getElementById('spell-select').value);
-  const spell2Id = document.getElementById('spell-select-2').value;
-  const spell2 = spell2Id ? BASE_SPELLS.find((s) => s.id === spell2Id) : null;
+  const spell2 = BASE_SPELLS.find((s) => s.id === document.getElementById('spell-select-2').value);
 
   let html = '';
-  if (spell2) {
-    html += `<h4 class="results-spell-title">${iconImg(spell1, 'combo-part-icon')}${localizedName(locale, spell1)}</h4>`;
-    html += renderResultsForSpell(spell1, budget);
+  html += `<h4 class="results-spell-title">${iconImg(spell1, 'combo-part-icon')}${localizedName(locale, spell1)}</h4>`;
+  html += renderResultsForSpell(spell1, budget);
+  if (spell2 && spell2.id !== spell1.id) {
     html += `<h4 class="results-spell-title">${iconImg(spell2, 'combo-part-icon')}${localizedName(locale, spell2)}</h4>`;
     html += renderResultsForSpell(spell2, budget);
-  } else {
-    html += renderResultsForSpell(spell1, budget);
   }
   el.innerHTML = html;
 }
 
-function populateSpellSelect(selectEl, includeEmpty) {
-  let html = includeEmpty ? `<option value="">(${dict.combinador.spell2None})</option>` : '';
+function populateSpellSelect(selectEl) {
+  let html = '';
   FAMILIES.forEach((fam) => {
     const items = BASE_SPELLS.filter((s) => s.family === fam);
     if (!items.length) return;
@@ -264,8 +261,10 @@ function populateSpellSelect(selectEl, includeEmpty) {
   });
   selectEl.innerHTML = html;
 }
-populateSpellSelect(document.getElementById('spell-select'), false);
-populateSpellSelect(document.getElementById('spell-select-2'), true);
+populateSpellSelect(document.getElementById('spell-select'));
+populateSpellSelect(document.getElementById('spell-select-2'));
+document.getElementById('spell-select-2').value =
+  BASE_SPELLS.find((s) => s.official && s.id !== document.getElementById('spell-select').value)?.id || BASE_SPELLS[1]?.id;
 
 document.getElementById('spell-select').addEventListener('change', renderResults);
 document.getElementById('spell-select-2').addEventListener('change', renderResults);

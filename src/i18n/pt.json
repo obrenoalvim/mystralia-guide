@@ -17,11 +17,9 @@
   "langSwitch": "English",
   "combinador": {
     "title": "Combinador de Feitiços",
-    "hint": "Monte sua run. Escolha até 2 feitiços base entre as 21 variantes confirmadas nos arquivos do jogo (4 delas com número oficial da wiki, as outras 17 confirmadas mas sem valor exato). Marque as Memórias que você tem, todas já vêm marcadas por padrão, e o combinador acha a melhor combinação por categoria e por feitiço, respeitando o orçamento de Pontos de Foco. Não simula o bônus de posição no canvas, só soma valores base.",
+    "hint": "Monte sua run com 2 feitiços base, escolhidos entre as 21 variantes confirmadas nos arquivos do jogo (4 delas com número oficial da wiki, as outras 17 confirmadas mas sem valor exato). Marque as Memórias que você tem, todas já vêm marcadas por padrão, e o combinador acha a melhor combinação por categoria e por feitiço, respeitando o orçamento de Pontos de Foco. Não simula o bônus de posição no canvas, só soma valores base.",
     "spell1": "Feitiço base 1",
     "spell2": "Feitiço base 2",
-    "spell2Hint": "opcional, run com 2 feitiços",
-    "spell2None": "nenhum",
     "budget": "Orçamento de Foco",
     "myMemories": "Minhas Memórias",
     "addMemory": "Adicionar Memória",
