@@ -1,0 +1,117 @@
+{
+  "lang": "en",
+  "htmlLang": "en",
+  "siteTitle": "Echoes of Mystralia Guide",
+  "siteDescription": "An unofficial community spellcrafting guide for Echoes of Mystralia, built from game file data with an interactive build combinator.",
+  "hero": {
+    "subtitle": "Unofficial community spellcrafting guide. Early Access launched August 11, 2026."
+  },
+  "nav": {
+    "combinador": "Combinator",
+    "guia": "Guide",
+    "feiticos": "Base Spells",
+    "memorias": "Memories",
+    "efeitos": "Effects",
+    "about": "About"
+  },
+  "langSwitch": "Português",
+  "combinador": {
+    "title": "Spell Combinator",
+    "hint": "Build your run. Pick up to 2 base spells from the 21 confirmed variants found in the game files (4 of them have official numbers from the wiki, the other 17 are confirmed but without exact values). Check the Memories you own, everything starts checked, and the combinator finds the best combination per category and per spell within your Focus Point budget. It does not simulate canvas position bonuses, it only adds base values.",
+    "spell1": "Base spell 1",
+    "spell2": "Base spell 2",
+    "spell2Hint": "optional, run with 2 spells",
+    "spell2None": "none",
+    "budget": "Focus budget",
+    "myMemories": "My Memories",
+    "addMemory": "Add Memory",
+    "search": "Search",
+    "bestCombos": "Best combinations",
+    "filterAll": "All",
+    "filterModifier": "Modifiers",
+    "filterTrigger": "Triggers",
+    "filterDatamined": "Datamined",
+    "notFound": "Nothing found.",
+    "focus": "focus"
+  },
+  "categories": {
+    "dano": "Damage",
+    "area": "Area Damage",
+    "controle": "Control",
+    "mobilidade": "Mobility",
+    "sustentacao": "Sustain"
+  },
+  "type": {
+    "modifier": "Modifier",
+    "trigger": "Trigger",
+    "unknown": "Unknown"
+  },
+  "elements": {
+    "Fire": "Fire", "Ice": "Water", "Lightning": "Lightning", "Air": "Wind",
+    "Earth": "Earth", "Light": "Light", "Void": "Void", "Neutral": "Neutral"
+  },
+  "family": {
+    "punch": "Punch", "beam": "Beam", "boomerang": "Boomerang",
+    "snipe": "Snipe", "stone": "Stone Wall"
+  },
+  "feiticos": {
+    "title": "Base Spells",
+    "hint": "The game files confirm 4 weapon families (Punch, Beam, Boomerang, and Snipe) that repeat across several elements, plus a unique Stone Wall: 21 real variants total. The published Early Access has 16 base spells, so some of these variants may not be unlocked yet. The 4 with a gold border have official wiki numbers. The rest, with a cyan border, were datamined: mechanic confirmed, no exact numeric value."
+  },
+  "memorias": {
+    "title": "Memories",
+    "countLabel": "with numeric data from the wiki",
+    "countLabel2": "datamined from the game files"
+  },
+  "efeitos": {
+    "title": "Effects and Status"
+  },
+  "guia": {
+    "title": "Guide",
+    "warning": "The game launched only days ago, Early Access on August 11, 2026. Many \"wiki\" sites that show up on Google for this game carry generic or speculative content, generated too fast to be real. An earlier version of this guide repeated the \"Fire plus Ice becomes Steam\" reaction from one of those sites by mistake, and removed it after it contradicted the official source. The Memories, base spells, and effects below come from the fandom.com wiki, a community source that appears to document the demo build: 4 base spells and 55 Memories. Early Access ships 16 spells and over 110 Memories, so this is a real subset, not the full game.",
+    "warningWikiLink": "fandom.com wiki",
+    "whatIsTitle": "What the game is",
+    "whatIsBody": "Echoes of Mystralia is a spellcrafting ARPG roguelite from Borealys Games, the studio behind Mages of Mystralia. You weave spells on a casting canvas called the Watcher's Heart, combining Memories (Modifiers or Triggers with their own Element, Rarity, and Focus Cost) onto one of the Base Spells.",
+    "stats": {
+      "elements": "elements in the full game",
+      "spells": "base spell variants confirmed in the files",
+      "spellsSub": "announced for Early Access",
+      "memories": "unique Memories confirmed in the files",
+      "memoriesSub": "with numeric data from the wiki",
+      "relics": "Relics",
+      "altar": "Altar upgrades",
+      "regions": "regions and 3 Guardians"
+    },
+    "howItWorksTitle": "How spellcrafting works",
+    "howItWorks1": "Position matters more than raw power. Where you place a piece on the canvas changes what the spell does, not just how strong it is. Memories like Pressure Buildup, which adds damage per Memory placed above, and Empty Stomach, which adds damage per empty slot below, only make sense with this positional system on the Watcher's Heart.",
+    "howItWorks2": "Every Memory has a Rarity (Common, Rare, or Epic), a Type (Modifier or Trigger), an Element, a Focus Cost from 0 to 3, and a source: Base for a normal drop, Altar for a permanent unlock.",
+    "howItWorks3": "The 4 elements officially revealed through a TikTok poll from @echoesofmystralia carry stylized in-game names: Furi Igni for Fire, Nosta Aqua for Water, Exae Aura for Lightning, and Cele Aer for Wind, confirming the wiki's 4 base spells again. The wiki also shows Earth and Light Memories. The installed game files, datamined on August 18, 2026, confirm the full list of 7 combat elements: Fire, Water (called Ice internally), Lightning, Wind, Earth, Light, and Void, the last one being the element that was missing. The files also carry a Neutral category, which does not count as a combat element.",
+    "resourcesTitle": "Game resources",
+    "resource1": "Eternal Wisdom: spent to buy and unlock Memories. The cost rises with every purchase, starting at 110 then 120.",
+    "resource2": "Watcher's Eyes: the resource needed to unlock additional elements.",
+    "resource3": "Beads: the reroll currency. 200 beads unlock a reroll of your options.",
+    "buildsTitle": "Real player builds",
+    "buildsHint": "Names seen directly in recorded gameplay from the HeadClick Gaming channel, from an Early Access build that does not necessarily use the demo Memories listed in the other tabs.",
+    "build1": "Fireball (Fire): the highest damage recorded, using the spiraling projectiles trigger and a Mark effect every 5 seconds.",
+    "build2": "Lightning Beam, Orb, and Shuriken (Lightning): a viewer suggested the orb for wrecking bosses; the shuriken bounces.",
+    "build3": "Water Shuriken and Frost Arc (Water): described by the streamer as completely broken.",
+    "build4": "Double Earth (Earth): terracotta figures turn into explosive bombs, seen in a build made after a balance patch.",
+    "receptionTitle": "Community reception",
+    "reception1": "The demo was excellent. I was genuinely shocked at how well the game held up, and how much fun it was to put spells together. Comment from u/Edema_Mema on r/Games, 8 upvotes.",
+    "reception2": "Disappointing that there is no launch discount, it's a saturated market and genre. Comment from u/The_Tiller on r/roguelites, 18 upvotes.",
+    "sourcesTitle": "Sources"
+  },
+  "about": {
+    "title": "About this guide",
+    "p1": "This is a fan guide, made with no connection to Borealys Games. Echoes of Mystralia had been in Early Access for only a few days when this site started, and most of what existed about the game in Portuguese and English was generic content generated too fast to trust.",
+    "p2": "The data here comes from two sources. The fandom.com community wiki documented 55 Memories and 4 base spells with real numbers, apparently from the demo build. Later, a session extracting data straight from the installed game files (Unity, IL2CPP) confirmed 171 additional unique Memories, the game's seventh element, and 21 real base spell variants, along with the original icons.",
+    "p3": "The entries pulled from the game files have no exact numeric value available and no official localization: the name comes from the game's internal identifier, and the description only lists which attributes the Memory affects. This is marked on every card. Anything with a number (damage, duration, percentage) came from the community wiki, not the files.",
+    "p4": "The code is open source. The repository holds the full research process documentation, including the sources rejected for looking artificially generated.",
+    "disclaimerTitle": "Disclaimer",
+    "disclaimer": "Echoes of Mystralia is a trademark of Borealys Games. This site is not affiliated with, endorsed by, or sponsored by the studio. All content pulled from the game files is used for informational purposes, for a community of players."
+  },
+  "footer": {
+    "sourceCode": "Source code on GitHub",
+    "builtWith": "Built with Astro"
+  }
+}

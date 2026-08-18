@@ -1,0 +1,14 @@
+[
+  {"id":"eff-bounce","namePt":"Bounce (Ricochete)","nameEn":"Bounce","descPt":"Redireciona o feitiço ou gatilho ao acertar.","descEn":"Redirects the spell or trigger on hit."},
+  {"id":"eff-burn","namePt":"Burn (Queimadura)","nameEn":"Burn","descPt":"Dano contínuo que empilha. Elemento: Fogo.","descEn":"Damage over time that stacks. Element: Fire."},
+  {"id":"eff-critical","namePt":"Critical (Crítico)","nameEn":"Critical","descPt":"Dano crítico, multiplicador base x2.","descEn":"Critical damage, base multiplier x2."},
+  {"id":"eff-chill","namePt":"Chill/Freeze (Resfriar/Congelar)","nameEn":"Chill/Freeze","descPt":"Acumula até deixar o alvo lento e depois totalmente congelado. Elemento: Água.","descEn":"Builds up until it slows the target, then fully freezes it. Element: Water."},
+  {"id":"eff-static","namePt":"Static (Estático)","nameEn":"Static","descPt":"Acumula até disparar uma corrente de raio em inimigos próximos. Elemento: Raio.","descEn":"Builds up until it triggers a lightning chain on nearby enemies. Element: Lightning."},
+  {"id":"eff-tangible","namePt":"Tangible (Tangível)","nameEn":"Tangible","descPt":"Bloqueia e colide com projéteis inimigos.","descEn":"Blocks and collides with enemy projectiles."},
+  {"id":"eff-homing","namePt":"Homing (Perseguição)","nameEn":"Homing","descPt":"Aumenta o rastreamento em direção aos inimigos.","descEn":"Increases tracking toward enemies."},
+  {"id":"eff-knockback","namePt":"Knockback (Empurrão)","nameEn":"Knockback","descPt":"Empurra inimigos pra trás.","descEn":"Pushes enemies back."},
+  {"id":"eff-low","namePt":"Low (Vida Baixa)","nameEn":"Low","descPt":"Abaixo de 35% de vida.","descEn":"Below 35% health."},
+  {"id":"eff-pierce","namePt":"Pierce (Perfuração)","nameEn":"Pierce","descPt":"Atravessa alvos.","descEn":"Passes through targets."},
+  {"id":"eff-vortex","namePt":"Vortex (Vórtice)","nameEn":"Vortex","descPt":"Puxa alvos em direção ao centro do feitiço ou gatilho.","descEn":"Pulls targets toward the spell's or trigger's center."},
+  {"id":"eff-haste","namePt":"Haste (Pressa)","nameEn":"Haste","descPt":"Aumenta velocidade de movimento em 1% por stack.","descEn":"Increases movement speed by 1% per stack."}
+]

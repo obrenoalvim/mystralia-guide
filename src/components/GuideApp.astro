@@ -1,0 +1,229 @@
+---
+import { getDict, elementLabel } from '../lib/localize.js';
+import { MEMORIES, BASE_SPELLS } from '../lib/data.js';
+
+const { locale = 'pt' } = Astro.props;
+const dict = getDict(locale);
+
+const seedCount = MEMORIES.filter((m) => m.tier !== 'Custom' && m.id.startsWith('m-')).length;
+const dataminedCount = MEMORIES.filter((m) => m.id.startsWith('g-')).length;
+const totalSpellVariants = BASE_SPELLS.length;
+const officialSpellCount = BASE_SPELLS.filter((s) => s.official).length;
+
+const otherLocale = locale === 'en' ? 'pt' : 'en';
+const otherHref = locale === 'en' ? '/' : '/en/';
+---
+
+<header class="hero" style="background-image:url('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/974480/page_bg_raw.jpg?t=1786478449')">
+  <div class="hero-overlay">
+    <div class="hero-sigils" aria-hidden="true">
+      <img src="/images/elements/fire.png" alt="" /><img src="/images/elements/ice.png" alt="" /><img src="/images/elements/lightning.png" alt="" />
+      <img src="/images/elements/air.png" alt="" /><img src="/images/elements/earth.png" alt="" /><img src="/images/elements/light.png" alt="" />
+      <img src="/images/elements/void.png" alt="" />
+    </div>
+    <a class="lang-switch" href={otherHref} hreflang={otherLocale}>{dict.langSwitch}</a>
+    <img
+      class="hero-logo"
+      src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/974480/header_alt_assets_1.jpg?t=1786478449"
+      alt="Echoes of Mystralia"
+    />
+    <h1>{dict.siteTitle}</h1>
+    <p>{dict.hero.subtitle}</p>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="combinador">&#9917; {dict.nav.combinador}</button>
+  <button class="tab-btn" data-tab="guia">{dict.nav.guia}</button>
+  <button class="tab-btn" data-tab="feiticos">{dict.nav.feiticos}</button>
+  <button class="tab-btn" data-tab="memorias">{dict.nav.memorias}</button>
+  <button class="tab-btn" data-tab="efeitos">{dict.nav.efeitos}</button>
+  <button class="tab-btn" data-tab="about">{dict.nav.about}</button>
+</nav>
+
+<main>
+  <section id="combinador" class="tab-panel active">
+    <h2>{dict.combinador.title}</h2>
+    <p class="hint">{dict.combinador.hint}</p>
+
+    <div class="combo-controls">
+      <label>
+        {dict.combinador.spell1}
+        <select id="spell-select"></select>
+      </label>
+      <label>
+        {dict.combinador.spell2} <span class="hint">({dict.combinador.spell2Hint})</span>
+        <select id="spell-select-2"><option value="">({dict.combinador.spell2None})</option></select>
+      </label>
+      <label>
+        {dict.combinador.budget}: <span id="budget-value">6</span>
+        <input type="range" id="focus-budget" min="1" max="15" value="6" />
+      </label>
+    </div>
+
+    <div class="combo-layout">
+      <div class="combo-inventory">
+        <div class="inventory-header">
+          <h3>{dict.combinador.myMemories}</h3>
+          <button id="add-memory-btn" class="btn-secondary">+ {dict.combinador.addMemory}</button>
+        </div>
+        <div class="mem-filters">
+          <button class="inv-filter-btn active" data-filter="">{dict.combinador.filterAll}</button>
+          <button class="inv-filter-btn" data-filter="modifier">{dict.combinador.filterModifier}</button>
+          <button class="inv-filter-btn" data-filter="trigger">{dict.combinador.filterTrigger}</button>
+          <button class="inv-filter-btn" data-filter="unknown">{dict.combinador.filterDatamined}</button>
+        </div>
+        <input type="text" id="inventory-search" class="mem-search" placeholder={dict.combinador.search + '...'} />
+        <div id="inventory-list"></div>
+      </div>
+
+      <div class="combo-results">
+        <h3>{dict.combinador.bestCombos}</h3>
+        <div id="results-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="guia" class="tab-panel">
+    <div class="warning-box">
+      &#9888;&#65039; {dict.guia.warning}
+    </div>
+
+    <h2>{dict.guia.whatIsTitle}</h2>
+    <p>{dict.guia.whatIsBody}</p>
+
+    <div class="stat-grid">
+      <div class="stat-card"><strong>7</strong>{dict.guia.stats.elements}</div>
+      <div class="stat-card"><strong>{totalSpellVariants}</strong>{dict.guia.stats.spells} / <strong>16</strong>{dict.guia.stats.spellsSub}</div>
+      <div class="stat-card"><strong>{dataminedCount}</strong>{dict.guia.stats.memories} / <strong>{seedCount}</strong>{dict.guia.stats.memoriesSub}</div>
+      <div class="stat-card"><strong>40+</strong>{dict.guia.stats.relics}</div>
+      <div class="stat-card"><strong>50+</strong>{dict.guia.stats.altar}</div>
+      <div class="stat-card"><strong>3</strong>{dict.guia.stats.regions}</div>
+    </div>
+
+    <div class="element-strip" aria-hidden="true">
+      <img src="/images/elements/fire.png" alt={elementLabel(locale, 'Fire')} title={elementLabel(locale, 'Fire')} />
+      <img src="/images/elements/ice.png" alt={elementLabel(locale, 'Ice')} title={elementLabel(locale, 'Ice')} />
+      <img src="/images/elements/lightning.png" alt={elementLabel(locale, 'Lightning')} title={elementLabel(locale, 'Lightning')} />
+      <img src="/images/elements/air.png" alt={elementLabel(locale, 'Air')} title={elementLabel(locale, 'Air')} />
+      <img src="/images/elements/earth.png" alt={elementLabel(locale, 'Earth')} title={elementLabel(locale, 'Earth')} />
+      <img src="/images/elements/light.png" alt={elementLabel(locale, 'Light')} title={elementLabel(locale, 'Light')} />
+      <img src="/images/elements/void.png" alt={elementLabel(locale, 'Void')} title={elementLabel(locale, 'Void')} />
+    </div>
+
+    <h2>{dict.guia.howItWorksTitle}</h2>
+    <ul>
+      <li>{dict.guia.howItWorks1}</li>
+      <li>{dict.guia.howItWorks2}</li>
+      <li>{dict.guia.howItWorks3}</li>
+    </ul>
+
+    <h2>{dict.guia.resourcesTitle}</h2>
+    <ul>
+      <li>{dict.guia.resource1}</li>
+      <li>{dict.guia.resource2}</li>
+      <li>{dict.guia.resource3}</li>
+    </ul>
+
+    <h2>{dict.guia.buildsTitle}</h2>
+    <p class="hint">{dict.guia.buildsHint}</p>
+    <ul>
+      <li>{dict.guia.build1}</li>
+      <li>{dict.guia.build2}</li>
+      <li>{dict.guia.build3}</li>
+      <li>{dict.guia.build4}</li>
+    </ul>
+
+    <h2>{dict.guia.receptionTitle}</h2>
+    <ul>
+      <li>{dict.guia.reception1}</li>
+      <li>{dict.guia.reception2}</li>
+    </ul>
+
+    <h2>{dict.guia.sourcesTitle}</h2>
+    <ul class="sources">
+      <li><a href="https://echoesofmystralia.fandom.com/wiki/Memories" target="_blank" rel="noopener">{dict.guia.warningWikiLink}: Memories</a></li>
+      <li><a href="https://echoesofmystralia.fandom.com/wiki/Spells" target="_blank" rel="noopener">{dict.guia.warningWikiLink}: Spells</a></li>
+      <li><a href="https://echoesofmystralia.fandom.com/wiki/Effects" target="_blank" rel="noopener">{dict.guia.warningWikiLink}: Effects</a></li>
+      <li><a href="https://store.steampowered.com/app/974480/Echoes_of_Mystralia/" target="_blank" rel="noopener">Steam</a></li>
+      <li><a href="https://echoesofmystralia.com/" target="_blank" rel="noopener">Borealys Games</a></li>
+      <li><a href="https://www.tiktok.com/@echoesofmystralia" target="_blank" rel="noopener">TikTok @echoesofmystralia</a></li>
+      <li><a href="https://www.youtube.com/@HeadClickGaming" target="_blank" rel="noopener">HeadClick Gaming (YouTube)</a></li>
+      <li><a href="https://www.reddit.com/r/Games/comments/1vlja0i/" target="_blank" rel="noopener">r/Games</a></li>
+      <li><a href="https://www.reddit.com/r/roguelites/comments/1vmftfv/" target="_blank" rel="noopener">r/roguelites</a></li>
+      <li><a href="https://github.com/obrenoalvim/mystralia-guide" target="_blank" rel="noopener">{dict.footer.sourceCode}</a></li>
+    </ul>
+  </section>
+
+  <section id="feiticos" class="tab-panel">
+    <h2>{dict.feiticos.title}</h2>
+    <p class="hint">{dict.feiticos.hint}</p>
+    <div id="spells-grid"></div>
+  </section>
+
+  <section id="memorias" class="tab-panel">
+    <h2>{dict.memorias.title} ({seedCount} {dict.memorias.countLabel} + {dataminedCount} {dict.memorias.countLabel2})</h2>
+    <div class="mem-filters">
+      <button class="mem-filter-btn active" data-filter="">{dict.combinador.filterAll}</button>
+      <button class="mem-filter-btn" data-filter="modifier">{dict.combinador.filterModifier}</button>
+      <button class="mem-filter-btn" data-filter="trigger">{dict.combinador.filterTrigger}</button>
+      <button class="mem-filter-btn" data-filter="unknown">{dict.combinador.filterDatamined}</button>
+      <input type="text" id="mem-search" class="mem-search" placeholder={dict.combinador.search + '...'} />
+    </div>
+    <div id="memories-grid" class="card-grid"></div>
+  </section>
+
+  <section id="efeitos" class="tab-panel">
+    <h2>{dict.efeitos.title}</h2>
+    <div id="effects-grid" class="card-grid"></div>
+  </section>
+
+  <section id="about" class="tab-panel">
+    <h2>{dict.about.title}</h2>
+    <p>{dict.about.p1}</p>
+    <p>{dict.about.p2}</p>
+    <p>{dict.about.p3}</p>
+    <p>{dict.about.p4} <a href="https://github.com/obrenoalvim/mystralia-guide" target="_blank" rel="noopener">GitHub</a>.</p>
+    <h2>{dict.about.disclaimerTitle}</h2>
+    <p class="hint">{dict.about.disclaimer}</p>
+  </section>
+</main>
+
+<dialog id="add-memory-dialog">
+  <form id="add-memory-form" method="dialog">
+    <h3>{dict.combinador.addMemory}</h3>
+    <label>{locale === 'en' ? 'Name' : 'Nome'}<input type="text" name="name" required /></label>
+    <label>
+      {locale === 'en' ? 'Element' : 'Elemento'}
+      <input type="text" name="element" placeholder="Fire, Water, Lightning..." />
+    </label>
+    <label>
+      {locale === 'en' ? 'Type' : 'Tipo'}
+      <select name="type" required>
+        <option value="modifier">{dict.type.modifier}</option>
+        <option value="trigger">{dict.type.trigger}</option>
+      </select>
+    </label>
+    <label>{locale === 'en' ? 'Focus Cost' : 'Custo de Foco'} <input type="number" name="focus" min="0" max="5" value="1" /></label>
+    <p class="hint">{locale === 'en' ? 'Estimate 0 (no effect) to 3 (strong effect) for each category:' : 'Estime de 0 (nenhum efeito) a 3 (efeito forte) pra cada categoria:'}</p>
+    <label>{dict.categories.dano} <input type="range" name="dano" min="0" max="3" value="1" /></label>
+    <label>{dict.categories.area} <input type="range" name="area" min="0" max="3" value="0" /></label>
+    <label>{dict.categories.controle} <input type="range" name="controle" min="0" max="3" value="0" /></label>
+    <label>{dict.categories.mobilidade} <input type="range" name="mobilidade" min="0" max="3" value="0" /></label>
+    <label>{dict.categories.sustentacao} <input type="range" name="sustentacao" min="0" max="3" value="0" /></label>
+    <div class="dialog-actions">
+      <button type="button" id="cancel-add">{locale === 'en' ? 'Cancel' : 'Cancelar'}</button>
+      <button type="submit" class="btn-primary">{locale === 'en' ? 'Add' : 'Adicionar'}</button>
+    </div>
+  </form>
+</dialog>
+
+<footer class="site-footer">
+  <a href="https://github.com/obrenoalvim/mystralia-guide" target="_blank" rel="noopener">{dict.footer.sourceCode}</a>
+  <span>&middot;</span>
+  <span>{dict.footer.builtWith}</span>
+</footer>
+
+<script>
+  import '../scripts/app.js';
+</script>

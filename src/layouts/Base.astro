@@ -1,0 +1,46 @@
+---
+import { getDict } from '../lib/localize.js';
+
+const { locale = 'pt' } = Astro.props;
+const dict = getDict(locale);
+const canonicalPath = locale === 'en' ? '/en/' : '/';
+const canonicalUrl = new URL(canonicalPath, Astro.site).toString();
+const altPath = locale === 'en' ? '/' : '/en/';
+const altUrl = new URL(altPath, Astro.site).toString();
+const ogImage = 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/974480/header_alt_assets_1.jpg?t=1786478449';
+---
+
+<!doctype html>
+<html lang={dict.htmlLang}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{dict.siteTitle}</title>
+  <meta name="description" content={dict.siteDescription} />
+  <link rel="canonical" href={canonicalUrl} />
+  <link rel="alternate" hreflang={locale === 'en' ? 'pt-BR' : 'en'} href={altUrl} />
+  <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site).toString()} />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={dict.siteTitle} />
+  <meta property="og:description" content={dict.siteDescription} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:locale" content={locale === 'en' ? 'en_US' : 'pt_BR'} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={dict.siteTitle} />
+  <meta name="twitter:description" content={dict.siteDescription} />
+  <meta name="twitter:image" content={ogImage} />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <slot />
+</body>
+</html>

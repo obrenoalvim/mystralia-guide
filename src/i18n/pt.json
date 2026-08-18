@@ -1,0 +1,117 @@
+{
+  "lang": "pt",
+  "htmlLang": "pt-BR",
+  "siteTitle": "Guia Echoes of Mystralia",
+  "siteDescription": "Guia comunitário não-oficial de spellcrafting para Echoes of Mystralia, com dados extraídos dos arquivos do jogo e um combinador de builds interativo.",
+  "hero": {
+    "subtitle": "Guia comunitário não-oficial de spellcrafting. Early Access lançado em 11 de agosto de 2026."
+  },
+  "nav": {
+    "combinador": "Combinador",
+    "guia": "Guia",
+    "feiticos": "Feitiços Base",
+    "memorias": "Memórias",
+    "efeitos": "Efeitos",
+    "about": "Sobre"
+  },
+  "langSwitch": "English",
+  "combinador": {
+    "title": "Combinador de Feitiços",
+    "hint": "Monte sua run. Escolha até 2 feitiços base entre as 21 variantes confirmadas nos arquivos do jogo (4 delas com número oficial da wiki, as outras 17 confirmadas mas sem valor exato). Marque as Memórias que você tem, todas já vêm marcadas por padrão, e o combinador acha a melhor combinação por categoria e por feitiço, respeitando o orçamento de Pontos de Foco. Não simula o bônus de posição no canvas, só soma valores base.",
+    "spell1": "Feitiço base 1",
+    "spell2": "Feitiço base 2",
+    "spell2Hint": "opcional, run com 2 feitiços",
+    "spell2None": "nenhum",
+    "budget": "Orçamento de Foco",
+    "myMemories": "Minhas Memórias",
+    "addMemory": "Adicionar Memória",
+    "search": "Buscar",
+    "bestCombos": "Melhores combinações",
+    "filterAll": "Todas",
+    "filterModifier": "Modificadores",
+    "filterTrigger": "Gatilhos",
+    "filterDatamined": "Dataminadas",
+    "notFound": "Nada encontrado.",
+    "focus": "foco"
+  },
+  "categories": {
+    "dano": "Dano",
+    "area": "Dano em Área",
+    "controle": "Controle",
+    "mobilidade": "Mobilidade",
+    "sustentacao": "Sustentação"
+  },
+  "type": {
+    "modifier": "Modificador",
+    "trigger": "Gatilho",
+    "unknown": "Desconhecido"
+  },
+  "elements": {
+    "Fire": "Fogo", "Ice": "Água", "Lightning": "Raio", "Air": "Vento",
+    "Earth": "Terra", "Light": "Luz", "Void": "Vazio", "Neutral": "Neutro"
+  },
+  "family": {
+    "punch": "Soco", "beam": "Feixe", "boomerang": "Bumerangue",
+    "snipe": "Disparo Carregado", "stone": "Muro de Pedra"
+  },
+  "feiticos": {
+    "title": "Feitiços Base",
+    "hint": "Os arquivos do jogo confirmam 4 famílias de arma (Soco, Feixe, Bumerangue e Disparo Carregado) que se repetem em vários elementos, mais um Muro de Pedra único: 21 variantes reais no total. A Early Access divulgada tem 16 feitiços base, então algumas dessas variantes podem ainda não estar liberadas. As 4 com borda dourada têm número oficial da wiki. As demais, com borda ciano, foram dataminadas: mecânica confirmada, sem valor numérico exato."
+  },
+  "memorias": {
+    "title": "Memórias",
+    "countLabel": "com dados numéricos da wiki",
+    "countLabel2": "dataminadas dos arquivos do jogo"
+  },
+  "efeitos": {
+    "title": "Efeitos e Status"
+  },
+  "guia": {
+    "title": "Guia",
+    "warning": "O jogo foi lançado há poucos dias, Early Access em 11 de agosto de 2026. Muitos sites de \"wiki\" que aparecem no Google para este jogo têm conteúdo genérico ou especulativo, gerado rápido demais pra ser real. Uma versão anterior deste guia chegou a repetir por engano a reação \"Fogo mais Gelo vira Vapor\" de um desses sites, removida depois de contradizer a fonte oficial. As Memórias, feitiços base e efeitos vêm da wiki fandom.com, uma fonte comunitária que parece documentar a build de demonstração: 4 feitiços base e 55 Memórias. A Early Access tem 16 feitiços e mais de 110 Memórias, então isso é um subconjunto real, não o jogo completo.",
+    "warningWikiLink": "wiki fandom.com",
+    "whatIsTitle": "O que é o jogo",
+    "whatIsBody": "Echoes of Mystralia é um ARPG roguelite de spellcrafting da Borealys Games, os criadores de Mages of Mystralia. Você tece feitiços numa tela de conjuração chamada Watcher's Heart, combinando Memórias (Modificadores ou Gatilhos com Elemento, Raridade e Custo de Foco próprios) em cima de um dos Feitiços Base.",
+    "stats": {
+      "elements": "elementos no jogo completo",
+      "spells": "variantes de feitiço base confirmadas nos arquivos",
+      "spellsSub": "anunciados pra Early Access",
+      "memories": "Memórias únicas confirmadas nos arquivos",
+      "memoriesSub": "com dados numéricos da wiki",
+      "relics": "Relíquias",
+      "altar": "upgrades de Altar",
+      "regions": "regiões e 3 Guardiões"
+    },
+    "howItWorksTitle": "Como funciona a criação de feitiços",
+    "howItWorks1": "Posição importa mais que poder bruto. Onde você coloca uma peça na tela muda o comportamento do feitiço, não só a força dele. Memórias como Pressure Buildup, que dá mais dano por Memória acima, e Empty Stomach, que dá mais dano por slot vazio abaixo, só fazem sentido com esse sistema de posição no Watcher's Heart.",
+    "howItWorks2": "Cada Memória tem Raridade (Common, Rare ou Epic), Tipo (Modificador ou Gatilho), Elemento, Custo de Foco de 0 a 3 e uma origem: Base para drop normal, Altar para desbloqueio permanente.",
+    "howItWorks3": "Os 4 elementos revelados oficialmente numa enquete do TikTok @echoesofmystralia têm nomes estilizados dentro do jogo: Furi Igni para Fogo, Nosta Aqua para Água, Exae Aura para Raio e Cele Aer para Vento, confirmados de novo como os 4 feitiços base da wiki. A wiki também mostra Memórias de Terra e de Luz. Os arquivos do jogo instalado, dataminados em 18 de agosto de 2026, confirmam a lista completa dos 7 elementos de combate: Fogo, Água (chamado Ice internamente), Raio, Vento, Terra, Luz e Vazio, esse último era o elemento que faltava. Existe também uma categoria Neutral nos arquivos, que não conta como elemento de combate.",
+    "resourcesTitle": "Recursos do jogo",
+    "resource1": "Sabedoria Eterna: gasta pra comprar e desbloquear Memórias. O custo sobe a cada compra, começando em 110 e depois 120.",
+    "resource2": "Olhos do Vigia: recurso necessário pra desbloquear elementos adicionais.",
+    "resource3": "Contas: moeda de reroll. 200 contas destravam o reroll de opções.",
+    "buildsTitle": "Builds reais de jogadores",
+    "buildsHint": "Nomes vistos direto em gameplay gravado pelo canal HeadClick Gaming, build da Early Access, que não necessariamente usa as Memórias de demonstração listadas nas outras abas.",
+    "build1": "Fireball (Fogo): maior dano registrado, usa o gatilho de projéteis espiralados e o efeito Marca a cada 5 segundos.",
+    "build2": "Lightning Beam, Orb e Shuriken (Raio): o orb foi sugerido por um espectador por acabar com chefes; o shuriken faz ricochete.",
+    "build3": "Water Shuriken e Frost Arc (Água): descrito pelo streamer como completamente quebrado.",
+    "build4": "Double Earth (Terra): bonecos de terracota viram bombas explosivas numa build pós-patch de balanceamento.",
+    "receptionTitle": "Recepção da comunidade",
+    "reception1": "A demo foi excelente. Fiquei genuinamente chocado com o quão bem o jogo se comportou, e o quanto foi divertido montar os feitiços. Comentário de u/Edema_Mema no r/Games, 8 votos.",
+    "reception2": "Decepcionante não ter desconto de lançamento, é um mercado e gênero saturado. Comentário de u/The_Tiller no r/roguelites, 18 votos.",
+    "sourcesTitle": "Fontes"
+  },
+  "about": {
+    "title": "Sobre este guia",
+    "p1": "Este é um guia de fã, feito sem vínculo com a Borealys Games. Echoes of Mystralia estava em Early Access havia poucos dias quando este site começou, e boa parte do que existia sobre o jogo em português e inglês era conteúdo genérico gerado rápido demais pra ser confiável.",
+    "p2": "Os dados aqui vêm de duas fontes. A wiki comunitária fandom.com documentou 55 Memórias e 4 feitiços base com números reais, aparentemente da build de demonstração. Depois, uma sessão de extração direta dos arquivos do jogo instalado (Unity, IL2CPP) confirmou 171 Memórias únicas adicionais, o sétimo elemento do jogo e 21 variantes reais de feitiço base, junto com os ícones originais.",
+    "p3": "As entradas extraídas dos arquivos do jogo não têm valor numérico exato disponível nem localização oficial: o nome vem do identificador interno do jogo, e a descrição lista só quais atributos a Memória afeta. Isso está marcado em cada card. Tudo que tem número (dano, duração, porcentagem) veio da wiki comunitária, não dos arquivos.",
+    "p4": "O código é aberto. O repositório tem a documentação completa do processo de pesquisa, incluindo as fontes rejeitadas por parecerem geradas artificialmente.",
+    "disclaimerTitle": "Aviso",
+    "disclaimer": "Echoes of Mystralia é uma marca da Borealys Games. Este site não é afiliado, endossado ou patrocinado pelo estúdio. Todo o conteúdo extraído dos arquivos do jogo é usado com finalidade informativa, para uma comunidade de jogadores."
+  },
+  "footer": {
+    "sourceCode": "Código fonte no GitHub",
+    "builtWith": "Feito com Astro"
+  }
+}
