@@ -54,7 +54,8 @@
   },
   "feiticos": {
     "title": "Feitiços Base",
-    "hint": "Os arquivos do jogo confirmam 4 famílias de arma (Soco, Feixe, Bumerangue e Disparo Carregado) que se repetem em vários elementos, mais um Muro de Pedra único: 21 variantes reais no total. A Early Access divulgada tem 16 feitiços base, então algumas dessas variantes podem ainda não estar liberadas. As 4 com borda dourada têm número oficial da wiki. As demais, com borda ciano, foram dataminadas: mecânica confirmada, sem valor numérico exato."
+    "hint": "Os arquivos do jogo confirmam 4 famílias de arma (Soco, Feixe, Bumerangue e Disparo Carregado) que se repetem em vários elementos, mais um Muro de Pedra único: 21 variantes reais no total. Os nomes seguem o padrão estilizado do jogo (prefixo da família + sufixo do elemento, tipo Furi Igni ou Cele Gaea). Dessas 21, 16 já têm um objetivo de desbloqueio confirmado nos arquivos, batendo com o número divulgado pra Early Access; as outras 4, marcadas abaixo, existem nos dados mas ainda não têm caminho de desbloqueio ligado a elas. As 4 com borda dourada têm número oficial da wiki. As demais, com borda ciano, foram dataminadas: mecânica confirmada, sem valor numérico exato.",
+    "notUnlockable": "sem desbloqueio confirmado ainda"
   },
   "memorias": {
     "title": "Memórias",

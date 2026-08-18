@@ -67,10 +67,11 @@ function renderBaseSpells() {
           ${items
             .map(
               (s) => `
-            <div class="card card--spell ${s.official ? 'card--spell-official' : ''}">
+            <div class="card card--spell ${s.official ? 'card--spell-official' : ''} ${s.unlockable === false ? 'card--spell-locked' : ''}">
               ${iconImg(s, 'card-icon')}
               <div class="card-body">
                 <h4>${localizedName(locale, s)} <span class="tag confirmado">${elementLabel(locale, s.element)}</span></h4>
+                ${s.unlockable === false ? `<p class="hint">${dict.feiticos.notUnlockable}</p>` : ''}
                 <p>${localizedDesc(locale, s)}</p>
               </div>
             </div>

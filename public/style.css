@@ -257,6 +257,8 @@ h3 {
 
 .card--spell { border-left: 3px solid var(--accent-2); }
 .card--spell-official { border-left-color: var(--gold); box-shadow: inset 0 0 20px rgba(232,177,58,.06); }
+.card--spell-locked { opacity: .7; border-left-style: dashed; }
+.card--spell-locked .hint { color: var(--text-faint); font-style: italic; margin-bottom: .3rem; }
 
 .spell-family { margin-bottom: 1.75rem; }
 .spell-family-title {
@@ -321,7 +323,20 @@ h3 {
 #budget-value { color: var(--accent-bright); font-family: var(--font-display); }
 
 .combo-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem; }
-@media (max-width: 800px) { .combo-layout { grid-template-columns: 1fr; } }
+@media (max-width: 800px) {
+  .combo-layout { grid-template-columns: 1fr; }
+  /* Results are the payoff; show them before the long, scrollable memory list. */
+  .combo-results { order: 1; }
+  .combo-inventory { order: 2; margin-top: .5rem; }
+  #inventory-list {
+    max-height: 55vh;
+    overflow-y: auto;
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius);
+    padding: .5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+}
 
 .inventory-header { display: flex; justify-content: space-between; align-items: center; gap: .5rem; }
 

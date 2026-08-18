@@ -54,7 +54,8 @@
   },
   "feiticos": {
     "title": "Base Spells",
-    "hint": "The game files confirm 4 weapon families (Punch, Beam, Boomerang, and Snipe) that repeat across several elements, plus a unique Stone Wall: 21 real variants total. The published Early Access has 16 base spells, so some of these variants may not be unlocked yet. The 4 with a gold border have official wiki numbers. The rest, with a cyan border, were datamined: mechanic confirmed, no exact numeric value."
+    "hint": "The game files confirm 4 weapon families (Punch, Beam, Boomerang, and Snipe) that repeat across several elements, plus a unique Stone Wall: 21 real variants total. The names follow the game's stylized pattern (family prefix plus element suffix, like Furi Igni or Cele Gaea). Of those 21, 16 already have a confirmed unlock objective in the files, matching the number published for Early Access; the other 4, flagged below, exist in the data but have no unlock path wired to them yet. The 4 with a gold border have official wiki numbers. The rest, with a cyan border, were datamined: mechanic confirmed, no exact numeric value.",
+    "notUnlockable": "no confirmed unlock yet"
   },
   "memorias": {
     "title": "Memories",

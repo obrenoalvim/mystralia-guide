@@ -37,6 +37,7 @@ const normalizedVariants = baseSpellVariants
     descEn: s.descEn,
     scores: s.scores,
     official: false,
+    unlockable: s.unlockable,
   }));
 
 const normalizedOfficial = baseSpellsOfficial.map((s) => ({
@@ -51,6 +52,7 @@ const normalizedOfficial = baseSpellsOfficial.map((s) => ({
   descEn: s.descEn,
   scores: s.scores,
   official: true,
+  unlockable: true,
 }));
 
 export const BASE_SPELLS = [...normalizedOfficial, ...normalizedVariants];
