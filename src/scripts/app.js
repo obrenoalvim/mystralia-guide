@@ -44,12 +44,25 @@ function iconImg(m, cls) {
 }
 
 // ---- Tabs ----
-document.querySelectorAll('.tab-btn').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-btn').forEach((b) => b.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach((p) => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById(btn.dataset.tab).classList.add('active');
+const tabButtons = [...document.querySelectorAll('.tab-btn')];
+function activateTab(btn) {
+  tabButtons.forEach((b) => {
+    b.classList.remove('active');
+    b.setAttribute('aria-selected', 'false');
+  });
+  document.querySelectorAll('.tab-panel').forEach((p) => p.classList.remove('active'));
+  btn.classList.add('active');
+  btn.setAttribute('aria-selected', 'true');
+  document.getElementById(btn.dataset.tab).classList.add('active');
+}
+tabButtons.forEach((btn, i) => {
+  btn.addEventListener('click', () => activateTab(btn));
+  btn.addEventListener('keydown', (e) => {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    e.preventDefault();
+    const next = tabButtons[(i + (e.key === 'ArrowRight' ? 1 : -1) + tabButtons.length) % tabButtons.length];
+    next.focus();
+    activateTab(next);
   });
 });
 
@@ -180,6 +193,12 @@ document.querySelectorAll('.inv-filter-btn').forEach((btn) => {
 
 // ---- Add custom memory dialog ----
 const dialog = document.getElementById('add-memory-dialog');
+document.querySelectorAll('.cat-range').forEach((range) => {
+  const out = range.nextElementSibling;
+  range.addEventListener('input', () => {
+    if (out) out.textContent = range.value;
+  });
+});
 document.getElementById('add-memory-btn').addEventListener('click', () => dialog.showModal());
 document.getElementById('cancel-add').addEventListener('click', () => dialog.close());
 document.getElementById('add-memory-form').addEventListener('submit', (e) => {
@@ -209,6 +228,9 @@ document.getElementById('add-memory-form').addEventListener('submit', (e) => {
   owned.add(mem.id);
   saveOwned(owned);
   e.target.reset();
+  document.querySelectorAll('.cat-range').forEach((range) => {
+    if (range.nextElementSibling) range.nextElementSibling.textContent = range.value;
+  });
   dialog.close();
   renderMemoriesGrid();
   renderInventory();

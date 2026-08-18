@@ -32,17 +32,17 @@ const otherHref = locale === 'en' ? '/' : '/en/';
   </div>
 </header>
 
-<nav class="tabs">
-  <button class="tab-btn active" data-tab="combinador">&#9917; {dict.nav.combinador}</button>
-  <button class="tab-btn" data-tab="guia">{dict.nav.guia}</button>
-  <button class="tab-btn" data-tab="feiticos">{dict.nav.feiticos}</button>
-  <button class="tab-btn" data-tab="memorias">{dict.nav.memorias}</button>
-  <button class="tab-btn" data-tab="efeitos">{dict.nav.efeitos}</button>
-  <button class="tab-btn" data-tab="about">{dict.nav.about}</button>
+<nav class="tabs" role="tablist" aria-label={dict.nav.combinador + ', ' + dict.nav.guia + ', ' + dict.nav.feiticos + ', ' + dict.nav.memorias + ', ' + dict.nav.efeitos + ', ' + dict.nav.about}>
+  <button class="tab-btn active" id="tabbtn-combinador" data-tab="combinador" role="tab" aria-selected="true" aria-controls="combinador">{dict.nav.combinador}</button>
+  <button class="tab-btn" id="tabbtn-guia" data-tab="guia" role="tab" aria-selected="false" aria-controls="guia">{dict.nav.guia}</button>
+  <button class="tab-btn" id="tabbtn-feiticos" data-tab="feiticos" role="tab" aria-selected="false" aria-controls="feiticos">{dict.nav.feiticos}</button>
+  <button class="tab-btn" id="tabbtn-memorias" data-tab="memorias" role="tab" aria-selected="false" aria-controls="memorias">{dict.nav.memorias}</button>
+  <button class="tab-btn" id="tabbtn-efeitos" data-tab="efeitos" role="tab" aria-selected="false" aria-controls="efeitos">{dict.nav.efeitos}</button>
+  <button class="tab-btn" id="tabbtn-about" data-tab="about" role="tab" aria-selected="false" aria-controls="about">{dict.nav.about}</button>
 </nav>
 
 <main>
-  <section id="combinador" class="tab-panel active">
+  <section id="combinador" class="tab-panel active" role="tabpanel" aria-labelledby="tabbtn-combinador" tabindex="0">
     <h2>{dict.combinador.title}</h2>
     <p class="hint">{dict.combinador.hint}</p>
 
@@ -84,7 +84,7 @@ const otherHref = locale === 'en' ? '/' : '/en/';
     </div>
   </section>
 
-  <section id="guia" class="tab-panel">
+  <section id="guia" class="tab-panel" role="tabpanel" aria-labelledby="tabbtn-guia" tabindex="0">
     <div class="warning-box">
       &#9888;&#65039; {dict.guia.warning}
     </div>
@@ -155,13 +155,13 @@ const otherHref = locale === 'en' ? '/' : '/en/';
     </ul>
   </section>
 
-  <section id="feiticos" class="tab-panel">
+  <section id="feiticos" class="tab-panel" role="tabpanel" aria-labelledby="tabbtn-feiticos" tabindex="0">
     <h2>{dict.feiticos.title}</h2>
     <p class="hint">{dict.feiticos.hint}</p>
     <div id="spells-grid"></div>
   </section>
 
-  <section id="memorias" class="tab-panel">
+  <section id="memorias" class="tab-panel" role="tabpanel" aria-labelledby="tabbtn-memorias" tabindex="0">
     <h2>{dict.memorias.title} ({seedCount} {dict.memorias.countLabel} + {dataminedCount} {dict.memorias.countLabel2})</h2>
     <div class="mem-filters">
       <button class="mem-filter-btn active" data-filter="">{dict.combinador.filterAll}</button>
@@ -173,12 +173,12 @@ const otherHref = locale === 'en' ? '/' : '/en/';
     <div id="memories-grid" class="card-grid"></div>
   </section>
 
-  <section id="efeitos" class="tab-panel">
+  <section id="efeitos" class="tab-panel" role="tabpanel" aria-labelledby="tabbtn-efeitos" tabindex="0">
     <h2>{dict.efeitos.title}</h2>
     <div id="effects-grid" class="card-grid"></div>
   </section>
 
-  <section id="about" class="tab-panel">
+  <section id="about" class="tab-panel" role="tabpanel" aria-labelledby="tabbtn-about" tabindex="0">
     <h2>{dict.about.title}</h2>
     <p>{dict.about.p1}</p>
     <p>{dict.about.p2}</p>
@@ -206,11 +206,11 @@ const otherHref = locale === 'en' ? '/' : '/en/';
     </label>
     <label>{locale === 'en' ? 'Focus Cost' : 'Custo de Foco'} <input type="number" name="focus" min="0" max="5" value="1" /></label>
     <p class="hint">{locale === 'en' ? 'Estimate 0 (no effect) to 3 (strong effect) for each category:' : 'Estime de 0 (nenhum efeito) a 3 (efeito forte) pra cada categoria:'}</p>
-    <label>{dict.categories.dano} <input type="range" name="dano" min="0" max="3" value="1" /></label>
-    <label>{dict.categories.area} <input type="range" name="area" min="0" max="3" value="0" /></label>
-    <label>{dict.categories.controle} <input type="range" name="controle" min="0" max="3" value="0" /></label>
-    <label>{dict.categories.mobilidade} <input type="range" name="mobilidade" min="0" max="3" value="0" /></label>
-    <label>{dict.categories.sustentacao} <input type="range" name="sustentacao" min="0" max="3" value="0" /></label>
+    <label>{dict.categories.dano} <input type="range" class="cat-range" name="dano" min="0" max="3" value="1" /> <output class="range-val">1</output></label>
+    <label>{dict.categories.area} <input type="range" class="cat-range" name="area" min="0" max="3" value="0" /> <output class="range-val">0</output></label>
+    <label>{dict.categories.controle} <input type="range" class="cat-range" name="controle" min="0" max="3" value="0" /> <output class="range-val">0</output></label>
+    <label>{dict.categories.mobilidade} <input type="range" class="cat-range" name="mobilidade" min="0" max="3" value="0" /> <output class="range-val">0</output></label>
+    <label>{dict.categories.sustentacao} <input type="range" class="cat-range" name="sustentacao" min="0" max="3" value="0" /> <output class="range-val">0</output></label>
     <div class="dialog-actions">
       <button type="button" id="cancel-add">{locale === 'en' ? 'Cancel' : 'Cancelar'}</button>
       <button type="submit" class="btn-primary">{locale === 'en' ? 'Add' : 'Adicionar'}</button>
